@@ -39,7 +39,7 @@ function updateFooterYear() {
 // Function to highlight active nav link
 function activateNavLinks() {
   const navLinks = document.querySelectorAll('nav a');
-  if (!navLinks.length) return;
+  if (!navLinks.length) return};
 
   // Highlight based on current URL
   navLinks.forEach(link => {
@@ -54,4 +54,29 @@ function activateNavLinks() {
       link.classList.add('active');
     });
   });
+// ...existing code...
+
+// Fetch and display games from RAWG API
+function fetchGames() {
+  fetch('https://api.rawg.io/api/games?key=YOUR_API_KEY&page_size=5')
+    .then(response => response.json())
+    .then(data => {
+      const gamesList = document.getElementById('games-list');
+      if (!gamesList) return;
+      gamesList.innerHTML = data.results.map(game => `
+        <div class="game-card">
+          <img src="${game.background_image}" alt="${game.name}" style="width:100px;border-radius:8px;">
+          <span>${game.name}</span>
+        </div>
+      `).join('');
+    })
+    .catch(err => {
+      console.error('Error fetching games:', err);
+    });
 }
+
+// Call fetchGames on DOMContentLoaded
+window.addEventListener('DOMContentLoaded', () => {
+  // ...existing code...
+  fetchGames();
+});

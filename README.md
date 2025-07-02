@@ -1,4 +1,12 @@
-Gaming Ground
+# Gaming Ground
+
+**Author:** Your Name
+
+**Live Site:** [https://yourusername.github.io/gaming-ground/](https://yourusername.github.io/gaming-ground/)
+
+**License:** MIT
+
+...rest of your README...Gaming Ground
 Gaming Ground is a simple, responsive HTML-based web page designed to serve as a hub for gamers. It introduces users to various gaming features such as discovering games, joining tournaments, watching streams, and connecting with a gaming community.
  Features
 Homepage Navigation: Clear and accessible navigation bar for easy exploration.
